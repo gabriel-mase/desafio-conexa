@@ -45,8 +45,8 @@ A Next.js application that lets you pick two characters from the Rick and Morty 
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd rick-and-morty-explorer
+git clone https://github.com/gabriel-mase/desafio-conexa.git
+cd desafio-conexa
 
 # Install dependencies
 npm install
