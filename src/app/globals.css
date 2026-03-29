@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4ade80;
+}
+
+/* Portal glow animation for divider */
+@keyframes portal-pulse {
+  0%, 100% { box-shadow: 0 0 8px 2px rgba(74, 222, 128, 0.3); }
+  50% { box-shadow: 0 0 16px 4px rgba(74, 222, 128, 0.6); }
+}
+
+.portal-glow {
+  animation: portal-pulse 2.5s ease-in-out infinite;
+}
