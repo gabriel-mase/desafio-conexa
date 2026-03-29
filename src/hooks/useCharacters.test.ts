@@ -30,7 +30,7 @@ describe('useCharacters', () => {
   });
 
   it('returns loading=true initially', () => {
-    (api.fetchCharacters as jest.Mock).mockResolvedValue(mockData);
+    (api.fetchCharacters as jest.Mock).mockReturnValue(new Promise(() => {}));
     const { result } = renderHook(() => useCharacters(1));
     expect(result.current.loading).toBe(true);
   });
@@ -52,7 +52,7 @@ describe('useCharacters', () => {
   });
 
   it('calls fetchCharacters with the correct page', async () => {
-    (api.fetchCharacters as jest.Mock).mockResolvedValue(mockData);
+    (api.fetchCharacters as jest.Mock).mockReturnValue(new Promise(() => {}));
     renderHook(() => useCharacters(3));
     expect(api.fetchCharacters).toHaveBeenCalledWith(3);
   });

@@ -35,4 +35,3 @@ export interface CharactersResponse {
   results: Character[];
 }
 
-export type CharacterSlot = 1 | 2;

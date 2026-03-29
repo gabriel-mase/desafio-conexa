@@ -32,9 +32,7 @@ export default function Home() {
     episodeSets?.onlyChar2 ?? []
   );
 
-  const char1Selected = selectedChar1 !== null;
-  const char2Selected = selectedChar2 !== null;
-  const bothSelected = char1Selected && char2Selected;
+  const bothSelected = selectedChar1 !== null && selectedChar2 !== null;
 
   return (
     <main className="min-h-screen bg-portal-dark">

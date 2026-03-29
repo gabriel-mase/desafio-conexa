@@ -1,4 +1,4 @@
-import { Character, CharactersResponse, Episode } from '@/types';
+import { CharactersResponse, Episode } from '@/types';
 
 const BASE_URL = 'https://rickandmortyapi.com/api';
 
@@ -7,12 +7,6 @@ export async function fetchCharacters(page: number = 1): Promise<CharactersRespo
     next: { revalidate: 3600 },
   });
   if (!res.ok) throw new Error(`Failed to fetch characters: ${res.status}`);
-  return res.json();
-}
-
-export async function fetchCharacterById(id: number): Promise<Character> {
-  const res = await fetch(`${BASE_URL}/character/${id}`);
-  if (!res.ok) throw new Error(`Failed to fetch character: ${res.status}`);
   return res.json();
 }
 

@@ -52,7 +52,7 @@ describe('useEpisodes', () => {
   });
 
   it('calls fetchEpisodesByIds with the correct ids', async () => {
-    (api.fetchEpisodesByIds as jest.Mock).mockResolvedValue(mockEpisodes);
+    (api.fetchEpisodesByIds as jest.Mock).mockReturnValue(new Promise(() => {}));
     renderHook(() => useEpisodes([1, 5, 10]));
     expect(api.fetchEpisodesByIds).toHaveBeenCalledWith([1, 5, 10]);
   });
